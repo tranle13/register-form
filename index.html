@@ -158,35 +158,37 @@
     </div>
 
     <div class="step-content-wrapper step-four">
-      <div class="step-detail">
+      <div class="step-details">
         <h2 class="title">Finishing up</h2>
         <p>Double-check everything looks OK before confirming.</p>
       </div>
 
       <div class="step-fields">
         <div class="summary-wrapper">
-          <div>
-            <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div style="display:flex;flex-flow:column;">
               <span class="selected-plan">Arcade (Monthly)</span>
-              <a>Change</a>
+              <button class="secondary" style="text-decoration:underline;padding:0;width:max-content;">Change</button>
             </div>
-            <span>$9/mo</span>
+            <span class="selected-plan-price">$9/mo</span>
           </div>
-          <div class="divider"/>
-          <div>
-            <span>Online service</span>
-            <span>+$1/mo</span>
+          <div class="divider"></div>
+          <div class="selected-add-ons-wrapper">
+            <div class="selected-add-on">
+              <span>Online service</span>
+              <span>+$1/mo</span>
+            </div>
           </div>
         </div>
-        <div>
-          <span>Total (per month)</span>
-          <span>+$12/mo</span>
+        <div class="total-wrapper">
+          <span class="total-plan">Total (per month)</span>
+          <span class="total-price">$12/mo</span>
         </div>
       </div>
-      
+
       <div class="step-actions">
         <button class="secondary back-to-one">Go Back</button>
-        <button class="normal complete next-to-two">Confirm</button>
+        <button class="complete next-to-two">Confirm</button>
       </div>
     </div>
   </form>

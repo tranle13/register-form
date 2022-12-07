@@ -161,7 +161,7 @@ button.complete:hover {
   flex: 2;
 }
 
-.step-content-wrapper button.normal {
+.step-content-wrapper button.normal, .step-content-wrapper button.complete {
   float: right;
 }
 
@@ -348,3 +348,52 @@ button.complete:hover {
 
 
 /* -------------------------- STEP FOUR SEPARATE STYLES -------------------------- */
+.step-four .summary-wrapper {
+  background-color: var(--magnolia);
+  border-radius: .5em;
+  padding: 1.5em;
+  display: grid;
+  row-gap: 1.5em;
+}
+.step-four .summary-wrapper .selected-plan{
+  font-family: "UbuntuMedium", sans-serif;
+  color: var(--marineblue);
+  margin-bottom: .5em;
+}
+.step-four .summary-wrapper .selected-plan-price {
+  font-family: "UbuntuMedium", sans-serif;
+  color: var(--marineblue);
+}
+.step-four .divider {
+  height: 1px;
+  width: 100%;
+  background-color: var(--lightgray);
+  margin: 0 auto;
+}
+.step-four .selected-add-on {
+  display: flex;
+  justify-content: space-between;
+}
+.step-four .selected-add-on span {
+  font-size: .9em;
+}
+.step-four .selected-add-on span:first-child {
+  color: var(--coolgray);
+}
+.step-four .selected-add-on span:last-child {
+  color: var(--marineblue);
+}
+.step-four .total-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6em 1.5em;
+}
+.step-four .total-wrapper .total-plan {
+  font-size: .9em;
+  color: var(--coolgray);
+}
+.step-four .total-wrapper .total-price {
+  font-family: "UbuntuBold", sans-serif;
+  font-size: large;
+  color: var(--purplishblue);
+}
