@@ -1,0 +1,350 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: local("Ubuntu"), url("./assets/fonts/Ubuntu-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "UbuntuMedium";
+  src: local("UbuntuMedium"), url("./assets/fonts/Ubuntu-Medium.ttf") format("truetype");
+}
+
+:root {
+  --marineblue: #02295a;
+  --purplishblue: #473dff;
+  --pastelblue: #adbeff;
+  --lightblue: #bfe2fd;
+  --strawberryred: #ed3548;
+  --coolgray: #9699ab;
+  --lightgray: #d6d9e6;
+  --magnolia: #f0f6ff;
+  --alabaster: #fafbff;
+}
+
+@font-face {
+  font-family: "UbuntuBold";
+  src: local("UbuntuBold"), url("./assets/fonts/Ubuntu-Bold.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EEF4FE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
+  min-height: 100vh;
+}
+
+input {
+  padding: .8em 1em;
+  border-radius: .5em;
+  border: 1px solid #E9E8EF;
+  font-family: "Ubuntu", sans-serif;
+  outline-width: .5px;
+  outline-color: #605BA3;
+}
+input.error {
+  border-color: red;
+}
+
+button {
+  border: none;
+  border-radius: .5em;
+  padding: 10px 15px;
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  cursor: pointer;
+}
+
+button.normal {
+  background-color: #04285C;
+}
+button.normal:hover {
+  background-color: #483FFF;
+}
+button.secondary {
+  padding: 10px 0;
+  color: #A3A4AB;
+  background-color: unset;
+}
+button.secondary:hover {
+  color: #04285C;
+}
+button.complete {
+  background-color: #463FFE;
+}
+button.complete:hover {
+  background-color: #928DFA;
+}
+
+.register-form {
+  background-color: white;
+  border-radius: .5em;
+  height: 500px;
+  width: 70%;
+  padding: 8px;
+  display: flex;
+  box-shadow: 0 2px 30px #e7eae4;
+}
+
+.register-form .side-step-navigation {
+  width: 33%;
+  background-image: url("./assets/images/bg-sidebar-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: .5em;
+  padding: 1.85em 1.5em;
+}
+
+.register-form .side-step-navigation .step-container {
+  display: flex;
+}
+
+.register-form .side-step-navigation .step-container:not(:last-child) {
+  margin-bottom: 1.5em
+}
+
+.register-form .side-step-navigation .step-number {
+  height: 2.25em;
+  width: 2.25em;
+  border: 1px solid #CFCCFF;
+  border-radius: 999px;
+  color: #F1F1FF;
+  font-family: "UbuntuBold", sans-serif;
+  font-size: .7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1em;
+  font-weight: bold;
+}
+.register-form .side-step-navigation .step-number.active {
+  background-color: #BEE1FF;
+  border-color: #BEE1FF;
+  color: #30517B;
+}
+
+.register-form .side-step-navigation .step-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register-form .side-step-navigation .step {
+  color: #8684FF;
+  font-size: .6em;
+  margin-bottom: 3px;
+}
+
+.register-form .side-step-navigation .step-name {
+  font-family: "UbuntuBold", sans-serif;
+  font-size: .625em;
+  font-weight: bolder;
+  color: #F1F1FF;
+  letter-spacing: 1px;
+}
+
+.step-content-wrapper {
+  flex: 1;
+  padding: 1.5em 2.5em;
+  display: flex;
+  flex-flow: column;
+}
+
+.step-content-wrapper .step-fields {
+  flex: 2;
+}
+
+.step-content-wrapper button.normal {
+  float: right;
+}
+
+.step-content-wrapper .title {
+  font-family: "UbuntuBold", sans-serif;
+  margin-bottom: .35em;
+}
+
+.step-content-wrapper p {
+  font-size: .95em;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  color: #B7B8BB;
+  margin-bottom: 2.5em;
+}
+
+.step-content-wrapper .field-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-content-wrapper .field-wrapper:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+.step-content-wrapper label {
+  font-size: .7em;
+  margin-bottom: .5em;
+}
+
+/* -------------------------- STEP TWO SEPARATE STYLES -------------------------- */
+.step-two .step-fields .plans-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 15px;
+  height: 45%;
+  margin-bottom: 1em;
+}
+
+.step-two .step-fields .plan {
+  border: 1px solid #E9E8EF;
+  border-radius: .5em;
+  padding: .65em;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.step-two .step-fields .plan:hover {
+  border-color: var(--purplishblue);
+}
+.step-two .step-fields .plan.selected {
+  background-color: var(--alabaster);
+  border-color: var(--purplishblue);
+}
+.step-two .step-fields .plan img {
+  width: 30px;
+  height: 30px;
+}
+.step-two .step-fields .plan .detail-wrapper {
+  display: flex;
+  flex-flow: column;
+}
+
+.step-two .step-fields .plan .detail-wrapper span:first-of-type {
+  font-family: "UbuntuMedium", sans-serif;
+  font-size: small;
+  margin-bottom: .5em;
+  color: var(--marineblue);
+}
+.step-two .step-fields .plan .detail-wrapper .plan-price {
+  font-size: x-small;
+  color: var(--coolgray);
+}
+.step-two .step-fields .plan .detail-wrapper .free-text {
+  font-size: x-small;
+  color: var(--marineblue);
+  margin-top: .5em;
+  display: none;
+}
+.step-two .step-fields .plan .detail-wrapper .free-text.show {
+  display: inherit;
+}
+.step-two .step-fields .types-wrapper {
+  padding: .5em;
+  background-color: var(--magnolia);
+  border-radius: .5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step-two .step-fields .types-wrapper label {
+  margin-bottom: 0;
+  font-family: "UbuntuMedium", sans-serif;
+  color: var(--lightgray);
+}
+.step-two .step-fields .types-wrapper label.active {
+  margin-bottom: 0;
+  font-family: "UbuntuMedium", sans-serif;
+  color: var(--marineblue);
+}
+.step-two .step-fields .types-wrapper label:not(:last-child) {
+  margin-right: 1.5em;
+}
+.step-two .step-fields .types-wrapper .switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 16px;
+}
+.step-two .step-fields .types-wrapper .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.step-two .step-fields .types-wrapper .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--marineblue);
+  transition: .3s;
+  -webkit-transition: .3s;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+}
+.step-two .step-fields .types-wrapper .switch .slider:before {
+  content: "";
+  height: 10px;
+  width: 10px;
+  margin-left: 3px;
+  background-color: white;
+  transition: .3s;
+  -webkit-transition: .3s;
+  border-radius: 50%;
+}
+.step-two .step-fields .types-wrapper .switch input:checked + .slider:before {
+  -webkit-transition: translateX(14px);
+  -ms-transform: translateX(14px);
+  transform: translateX(14px);
+}
+
+
+/* -------------------------- STEP THREE SEPARATE STYLES -------------------------- */
+.step-three .add-ons-wrapper {
+  display: grid;
+  row-gap: 1em;
+}
+.step-three .add-ons-wrapper .add-on-wrapper {
+  display: flex;
+  border-radius: .5em;
+  border: 1px solid var(--lightgray);
+  padding: 1em 1.25em;
+  justify-content: space-between;
+  align-items: center;
+}
+.step-three .add-ons-wrapper .add-on-wrapper.selected {
+  border-color: var(--purplishblue);
+  background-color: var(--magnolia);
+}
+.step-three .add-ons-wrapper .add-on-wrapper .add-on-desc {
+  display: flex;
+  flex-flow: column;
+  flex: 2;
+  margin: 0 1.5em;
+}
+.step-three .add-ons-wrapper .add-on-wrapper .add-on-desc span:first-child {
+  font-family: "UbuntuMedium", sans-serif;
+  font-size: .9em;
+  color: var(--marineblue);
+  margin-bottom: .25em;
+}
+.step-three .add-ons-wrapper .add-on-wrapper .add-on-desc span:last-child {
+  font-size: small;
+  color: var(--coolgray);
+}
+.step-three .add-ons-wrapper .add-on-wrapper .add-on-price {
+  color: var(--purplishblue);
+  font-size: small;
+}
+
+
+/* -------------------------- STEP FOUR SEPARATE STYLES -------------------------- */
