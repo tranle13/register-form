@@ -8,6 +8,11 @@
   src: local("UbuntuMedium"), url("./assets/fonts/Ubuntu-Medium.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "UbuntuBold";
+  src: local("UbuntuBold"), url("./assets/fonts/Ubuntu-Bold.ttf") format("truetype");
+}
+
 :root {
   --marineblue: #02295a;
   --purplishblue: #473dff;
@@ -18,11 +23,6 @@
   --lightgray: #d6d9e6;
   --magnolia: #f0f6ff;
   --alabaster: #fafbff;
-}
-
-@font-face {
-  font-family: "UbuntuBold";
-  src: local("UbuntuBold"), url("./assets/fonts/Ubuntu-Bold.ttf") format("truetype");
 }
 
 * {
@@ -396,4 +396,24 @@ button.complete:hover {
   font-family: "UbuntuBold", sans-serif;
   font-size: large;
   color: var(--purplishblue);
+}
+
+
+/* -------------------------- STEP FINAL SEPARATE STYLES -------------------------- */
+.step-final {
+  justify-content: center;
+  align-items: center;
+}
+.step-final img {
+  height: 5em;
+  width: 5em;
+}
+.step-final h1 {
+  font-family: "UbuntuBold", sans-serif;
+  color: var(--marineblue);
+  margin: 1em 0 .5em;
+}
+.step-final span {
+  text-align: center;
+  color: var(--coolgray);
 }
